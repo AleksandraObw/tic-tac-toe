@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/icon.png">
+    <title>Tic Tac Toe game</title>
+</head>
+<body>
+    <div class="body__game game">
+
+        <div class="body__turn turn" id="turn">
+            <div class="turn__x-mark turn__mark x-mark">X</div>
+            <div class="turn__y-mark turn__mark y-mark">O</div>
+        </div>
+
+        <div class="body__board board" id="board">
+            <div class="board__cell cell"></div>
+            <div class="board__cell cell"></div>
+            <div class="board__cell cell"></div>
+            <div class="board__cell cell"></div>
+            <div class="board__cell cell"></div>
+            <div class="board__cell cell"></div>
+            <div class="board__cell cell"></div>
+            <div class="board__cell cell"></div>
+            <div class="board__cell cell"></div>
+        </div>
+
+        <div class="body__game-over game-over hidden" id="results">
+            <p class="game-over__result result" id="winner">Winner is X !</p>
+            <button class="game-over__btn-new-game btn-new-game" id="new-game">Play again</button>
+        </div>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

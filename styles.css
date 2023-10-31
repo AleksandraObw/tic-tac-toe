@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto Slab', 'Times New Roman', Times, serif;
+    background: linear-gradient(90deg, rgba(26,26,31,1) 0%, rgb(65, 65, 66) 33%, rgba(31,33,33,1) 100%);
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+.body__game {
+    position: absolute;
+    top: 20vh;
+    left: 50vw;
+    transform: translate(-50%, 0);
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 40px;
+}
+
+.turn {
+    display: flex;
+    flex-direction: row;
+    color: #DCDCDC;
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+    position: relative;
+    transition: all .5s;
+}
+
+.turn::after {
+    content: "";
+    display: inline-block;
+    height: 80px;
+    width: 160px;
+    background-color: #8B008B;
+    z-index: -10;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.turn.changed::after {
+    left: 160px;
+}
+
+.turn__mark {
+    height: 80px;
+    width: 160px;
+    border: 2px solid #DCDCDC;
+    text-align: center;
+    padding: 8px;
+}
+
+.body__board {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+}
+
+.board__cell {
+    height: 120px;
+    width: 120px;
+}
+
+ .cell {
+    border: 2px solid #DCDCDC;
+    padding: 8px;
+    color: #DCDCDC;
+    font-size: 40px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ .cell:hover {
+    cursor: pointer;
+    background-color: #8B008B;
+ }
+.body__game-over {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+}
+
+.result {
+    color: #DCDCDC;
+    font-size: 40px;
+    font-weight: 800;
+ }
+
+.btn-new-game {
+    height: 48px;
+    width: 200px;
+    border: 2px solid #DCDCDC;
+    text-align: center;
+    padding: 8px;
+    color: #DCDCDC;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #8B008B;  
+    transition: all .5s;
+}
+
+.btn-new-game:hover {
+    cursor: pointer;
+    letter-spacing: 0.1rem;
+}
+
+ .hidden {
+    display: none;
+ }
+
+ .highlight {
+    background-color: #8B008B;
+ }
